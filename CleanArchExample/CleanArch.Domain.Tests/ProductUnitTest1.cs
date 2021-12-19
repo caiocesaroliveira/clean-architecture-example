@@ -11,7 +11,7 @@ namespace CleanArch.Domain.Tests
         [Fact]
         public void CreateProduct_WithValidParameters_ResultObjectValidState()
         {
-            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, 99, "Product Image" );
+            Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, 99, "Product Image");
             action.Should()
                 .NotThrow<DomainExceptionValidation>();
         }
@@ -110,7 +110,7 @@ namespace CleanArch.Domain.Tests
         {
             Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, 99, "");
             action.Should().NotThrow<DomainExceptionValidation>();
-                
+
         }
         [Fact]
         public void CreateProduct_LongImageName_DomainExceptionLongImageName()
