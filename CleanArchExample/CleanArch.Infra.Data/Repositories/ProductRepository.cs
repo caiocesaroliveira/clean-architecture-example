@@ -50,7 +50,7 @@ namespace CleanArch.Infra.Data.Repositories
             return product;
         }
 
-        public async Task<Product> DeleteAsync(Product product)
+        public async Task<Product> RemoveAsync(Product product)
         {
             _context.Remove(product);
             await _context.SaveChangesAsync();
